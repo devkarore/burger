@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService {
+export class ApiService {
 
-  private dataBase = '/burger-api2';
+  private dataBase = 'http://localhost:8080';
 
   constructor(private monHttpClient: HttpClient) {}
 
