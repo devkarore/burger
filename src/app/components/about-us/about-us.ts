@@ -2,10 +2,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api-service';
 import { AuthService } from '../../services/auth-service';
 import { AboutUsArticleModel } from '../../models/article-model';
+import { HashtagsPipe } from '../../pipes/hashtags-pipe';
 
 @Component({
   selector: 'app-about-us',
-  imports: [],
+  imports: [HashtagsPipe],
   templateUrl: './about-us.html',
   styleUrl: './about-us.scss',
 })

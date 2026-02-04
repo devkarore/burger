@@ -1,12 +1,53 @@
 @use './variables' as *;
 
 body {
-background-color: rgb(189, 173, 173);
-//     background-color: $bgColor;
-//     // color: $mainText;
-//     // font-family: map-get($text, family);
-//     // font-size: map-get($text, size);
-//     // font-weight: map-get($text, font-style);
-//     // margin: 0;
-//     // padding: 0;
+background-color: $bgColor;
+color: $mainText;
+
+font-size: $text;
+font-family: $fontArial;
+font-weight: $fontStyleRegular;
+
+.highlight {
+  color: #fabb26;
+  font-weight: 700;
+}
+
+
+.buttons {
+    background-color: $orangeButtons !important;
+    color: $mainText;
+    font-size: $buttons;
+    font-family: $fontRoboto;
+    font-weight: $fontStyleBold;
+}
+
+h1 {
+    color: $yellowText;
+    font-size: $smallTitles;
+    font-family: $fontRoboto;
+    font-weight: $fontStyleLight; 
+}
+H2 {
+    font-size: $bigTitles;
+    font-family: $fontRoboto;
+    font-weight: $fontStyleBlack; 
+}
+
+.about{
+    background-image: url('/about-us-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header{
+    background-image: url('/header-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+footer{
+    background-color: $orangeButtons;
+}
 }

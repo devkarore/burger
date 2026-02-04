@@ -1,7 +1,22 @@
-@if (articleHeader(); as article) {
-<h2> {{ article.sousTitre }}</h2>
-<img [src]="article.photoURL" alt="burger is the best" />
-<a href="{{ article.href_lien }}">{{ article.libelle_lien }}</a>
-} @else {
-  <p>Chargement...</p>
-}
+<header>
+  <div class="container py-5">
+    @if (articleHeader(); as article) {
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-5 order-2 order-lg-1 header-text">
+          <h2 [innerHTML]="article.sousTitre | hashtags"></h2>
+          <a class="buttons text-decoration-none btn btn-brand mt-3" [href]="article.href_lien">{{ article.libelle_lien }}</a>
+        </div>
+    
+        <div class="col-12 col-lg-7 order-1 order-lg-2">
+          <img class="img-fluid" [src]="article.photoURL" alt="burger is the best" />
+        </div>
+
+      </div>
+
+    } @else {
+    <p>Chargement...</p>
+    }
+
+  </div>
+
+</header>

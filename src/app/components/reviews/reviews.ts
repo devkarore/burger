@@ -2,10 +2,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api-service';
 import { AuthService } from '../../services/auth-service';
 import { ReviewsArticleModel } from '../../models/article-model';
+import { HashtagsPipe } from '../../pipes/hashtags-pipe';
 
 @Component({
   selector: 'app-reviews',
-  imports: [],
+  imports: [HashtagsPipe],
   templateUrl: './reviews.html',
   styleUrl: './reviews.scss',
 })

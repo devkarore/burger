@@ -8,42 +8,19 @@ $mainText: #ffffff;
 $yellowText: #fabb26;
 $blackText: #000000;
 
-$bigTitles: (
-    size: 72px,
-    family: 'Roboto Condensed',
-    font-style: black 900,    
-    );
+$fontRoboto: 'Roboto Condensed';
+$fontArial: 'Arial';
+$fontStyleBlack: 'black 900';
+$fontStyleBold: 'bold 700';
+$fontStyleRegular: 'regular 400';
+$fontStyleLight: 'light 300';
 
-$smallTitles: (
-    size: 36px,
-    family: 'Roboto Condensed',
-    font-style: light 300,
-    );
-
-$text: (
-    size: 18px,
-    family: 'Arial',
-    font-style: regular 400,
-    );
-
-$readMore: (
-    size: 12px,
-    family: 'Roboto Condensed',
-    font-style: regular 400,
-    );
-
-$buttons: (
-    size: 23px,
-    family: 'Roboto Condensed',
-    font-style: bold 700,
-    );
-
-$OrderNow: (
-    size: 18px,
-    family: 'Roboto Condensed',
-    font-style: black 900,    
-    );
-
+$bigTitles: 72px;
+$smallTitles: 36px;
+$text: 18px;
+$readMore: 12px;
+$buttons: 23px;
+$OrderNow: 18px;
 
 
 

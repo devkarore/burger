@@ -2,11 +2,12 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api-service';
 import { AuthService } from '../../services/auth-service';
 import { HotDealArticleModel } from '../../models/article-model';
+import { HashtagsPipe } from '../../pipes/hashtags-pipe';
 
 
 @Component({
   selector: 'app-hot-deal',
-  imports: [],
+  imports: [HashtagsPipe],
   templateUrl: './hot-deal.html',
   styleUrl: './hot-deal.scss',
 })

@@ -2,10 +2,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api-service';
 import { AuthService } from '../../services/auth-service';
 import { OurMenuArticleModel } from '../../models/article-model';
+import { HashtagsPipe } from '../../pipes/hashtags-pipe';
 
 @Component({
   selector: 'app-our-menu',
-  imports: [],
+  imports: [HashtagsPipe],
   templateUrl: './our-menu.html',
   styleUrl: './our-menu.scss',
 })

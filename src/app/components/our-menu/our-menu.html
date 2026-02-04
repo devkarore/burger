@@ -1,6 +1,10 @@
-@if (articleOurMenu(); as article) {
-<h1> {{ article.titre }}</h1>
-<h2> {{ article.sousTitre }}</h2>
-} @else {
-  <p>Chargement...</p>
-}
+<div class="container py-5">
+  @if (articleOurMenu(); as article) {
+  <h1> {{ article.titre }}</h1>
+  <h2 [innerHTML]="article.sousTitre | hashtags"></h2>
+  <a class="buttons" [href]="article.href_lien">{{ article.libelle_lien }}</a>
+  } @else {
+    <p>Chargement...</p>
+  }
+
+</div>

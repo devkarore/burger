@@ -1,8 +1,20 @@
-@if (articleHotDeal(); as article) {
-<img src="{{ article.photoURL }}" alt="The best burger" />
-<h1> {{ article.titre }}</h1>
-<h2> {{ article.sousTitre }}</h2>
-<p> {{ article.contenu }}</p>
-} @else {
-  <p>Chargement...</p>
-}
+<div class="container py-5">
+  @if (articleHotDeal(); as article) {
+    <div class="row align-items-center justify-content-between g-4">
+      
+      <div class="col-12 col-lg-5 order-2 order-lg-1 header-text">
+        <h1> {{ article.titre }}</h1>
+        <h2 [innerHTML]="article.sousTitre | hashtags"></h2>
+        <p> {{ article.contenu }}</p>
+      </div>
+      
+      <div class="col-12 col-lg-5 order-1 order-lg-2">
+        <img class="img-fluid" src="{{ article.photoURL }}" alt="The best burger" />
+      </div>
+
+    </div>
+  } @else {
+    <p>Chargement...</p>
+  }
+
+</div>

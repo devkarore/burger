@@ -1,26 +1,29 @@
-<div class="container-fluid d-flex align-items-center justify-content-between">
-  <img src="logo.png" alt="Logo">
-
-  <nav>
-    <ul class="nav">
-      @for (lien of tableauLiens; track lien.id; let isLast = $last) {
-        @if (!isLast) {
+<div class="container py-5">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <img src="logo.png" alt="Logo">
+  
+    <nav>
+      <ul class="nav">
+        @for (lien of tableauLiens; track lien.id; let isLast = $last) {
+          @if (!isLast) {
+            <li class="nav-item">
+              <a class="nav-link" [href]="lien.lien">{{ lien.libelle }}</a>
+            </li>
+          }
+        }
+  
+        @if (tableauLiens.length > 0) {
           <li class="nav-item">
-            <a class="nav-link" [href]="lien.lien">{{ lien.libelle }}</a>
+            <a
+              class="nav-link buttons"
+              [href]="tableauLiens[tableauLiens.length - 1].lien"
+            >
+              {{ tableauLiens[tableauLiens.length - 1].libelle }}
+            </a>
           </li>
         }
-      }
+      </ul>
+    </nav>
+  </div>
 
-      @if (tableauLiens.length > 0) {
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [href]="tableauLiens[tableauLiens.length - 1].lien"
-          >
-            {{ tableauLiens[tableauLiens.length - 1].libelle }}
-          </a>
-        </li>
-      }
-    </ul>
-  </nav>
 </div>

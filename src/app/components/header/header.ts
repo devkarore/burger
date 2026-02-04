@@ -2,10 +2,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api-service';
 import { AuthService } from '../../services/auth-service';
 import { HeaderArticleModel } from '../../models/article-model';
+import { HashtagsPipe } from '../../pipes/hashtags-pipe';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [HashtagsPipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
@@ -45,4 +46,5 @@ ngOnInit(): void {
     }
   });
 }
+
 }

@@ -2,10 +2,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api-service';
 import { AuthService } from '../../services/auth-service';
 import { ContactModel } from '../../models/article-model';
+import { HashtagsPipe } from '../../pipes/hashtags-pipe';
 
 @Component({
   selector: 'app-contact',
-  imports: [],
+  imports: [HashtagsPipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
