@@ -1,1 +1,8 @@
-<p>contact works!</p>
+@if (articleContact(); as article) {
+<h1> {{ article.titre }}</h1>
+<h2> {{ article.sousTitre }}</h2>
+<p> {{ article.contenu }}</p>
+<a href="{{ article.href_lien }}">{{ article.libelle_lien }}</a>
+} @else {
+  <p>Chargement...</p>
+}

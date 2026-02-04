@@ -1,1 +1,6 @@
-<p>slider-menu works!</p>
+@if (articleOurMenu(); as article) {
+<h1> {{ article.titre }}</h1>
+<h2> {{ article.sousTitre }}</h2>
+} @else {
+  <p>Chargement...</p>
+}

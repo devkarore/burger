@@ -1,1 +1,7 @@
-<p>header works!</p>
+@if (articleHeader(); as article) {
+<h2> {{ article.sousTitre }}</h2>
+<img [src]="article.photoURL" alt="burger is the best" />
+<a href="{{ article.href_lien }}">{{ article.libelle_lien }}</a>
+} @else {
+  <p>Chargement...</p>
+}

@@ -1,1 +1,8 @@
-<p>hot-deal works!</p>
+@if (articleHotDeal(); as article) {
+<img src="{{ article.photoURL }}" alt="The best burger" />
+<h1> {{ article.titre }}</h1>
+<h2> {{ article.sousTitre }}</h2>
+<p> {{ article.contenu }}</p>
+} @else {
+  <p>Chargement...</p>
+}

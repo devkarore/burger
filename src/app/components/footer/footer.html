@@ -1,1 +1,14 @@
-<p>footer works!</p>
+@if (articleTweetsWidget(); as article) {
+<h1> {{ article.titre }}</h1>
+<img src="{{ article.photoURL }}" alt="">
+<p> {{ article.contenu }}</p>
+<a href="{{ article.href_lien }}">{{ article.libelle_lien }}</a>
+} @else {
+  <p>Chargement...</p>
+}
+@if (articleNewsletter(); as article2) {
+<h1> {{ article2.titre }}</h1>
+<p> {{ article2.contenu }}</p>
+} @else {
+  <p>Chargement...</p>
+}
