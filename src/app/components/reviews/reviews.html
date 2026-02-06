@@ -1,9 +1,11 @@
-<div class="container py-5">
-  @if (articleReviews(); as article) {
-  <h1> {{ article.titre }}</h1>
-  <h2 [innerHTML]="article.sousTitre | hashtags"></h2>
-  } @else {
-    <p>Chargement...</p>
-  }
-
+<div class="container py-5 d-flex justify-content-center">
+  <div class="w-75 text-center">
+    @if (articleReviews(); as article) {
+    <h1> {{ article.titre }}</h1>
+    <div class="trait my-3"></div>
+    <h2 [innerHTML]="article.sousTitre | hashtags"></h2>
+    } @else {
+      <p>Chargement...</p>
+    }
+  </div>
 </div>

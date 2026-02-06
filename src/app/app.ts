@@ -11,10 +11,11 @@ import { Reviews } from "./components/reviews/reviews";
 import { Contact } from "./components/contact/contact";
 import { Footer } from './components/footer/footer';
 import { ApiService } from './services/api-service';
+import { Video } from './components/video/video';
 
 @Component({
   selector: 'app-root',
-  imports: [Menu, Header, Category, AboutUs, HotDeal, OurMenu, Reviews, Contact, Footer],
+  imports: [Menu, Header, Category, AboutUs, HotDeal, OurMenu, Reviews, Contact, Footer, Video],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,1 +1,38 @@
-<p>category works!</p>
+<div class="container py-5">
+    <div class="row align-items-center g-4">
+        <ul>
+            @for (category of Listcategory(); track category.id) {
+                <li>
+                    <img class="img-fluid" [src]="category.photo" alt="FOOD" />
+                    <h2 [innerHTML]="category.nom"></h2>
+                    <p [innerHTML]="category.sous_titre"></p>
+                    <a class="text-decoration-none" [href]="category.href_lien">{{ category.libelle_lien }}</a>
+                </li>
+            }
+        </ul>
+        @for (category of Listcategory(); track category.id) {
+
+        <!-- <div class="col-lg-4" [id]="category.id" [attr.id]="'category-' + category.id">
+            <img class="img-fluid" [src]="category.photo" alt="FOOD" />
+            <h2 [innerHTML]="category.nom"></h2>
+            <p [innerHTML]="category.sous_titre"></p>
+            <a class="text-decoration-none" [href]="category.href_lien">{{ category.libelle_lien }}</a>
+
+        </div> -->
+        }
+    </div>
+    <!-- <img class="img-fluid" [src]="Listcategory.photo" alt="FOOD" />
+    <h2 >{{ Listcategory.nom }}</h2>
+    <p >{{ Listcategory.sous_titre }}</p> -->
+</div>
+<!-- <div class="container py-5 d-flex justify-content-center">
+  <div class="w-75 text-center">
+    @if (Listcategory(); as encart) {
+    <h2 [innerHTML]="encart.sousTitre | hashtags"></h2>
+    <p>{{ encart.contenu }}</p>
+    <a class="buttons" [href]="encart.href_lien">{{ encart.libelle_lien }}</a>
+    } @else {
+      <p>Chargement...</p>
+    }
+  </div>
+</div> -->

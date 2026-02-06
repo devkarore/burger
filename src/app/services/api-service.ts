@@ -51,4 +51,9 @@ export class ApiService {
   const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
   return this.monHttpClient.get(`${this.dataBase}/index.php?get=newsletter`, { headers });
   }
+
+  getCatehory(token: string) {
+  const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+  return this.monHttpClient.get(`${this.dataBase}/index.php?get=category`, { headers });
+  }
 }

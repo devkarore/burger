@@ -8,6 +8,7 @@
 
       <div class="col-12 col-lg-5 order-2 order-lg-2">
         <h1> {{ article.titre }}</h1>
+        <div class="trait my-3"></div>
         <h2 [innerHTML]="article.sousTitre | hashtags" style="border-right: 10px solid #faba2600;"></h2>
         <p> {{ article.contenu }}</p>
       </div>

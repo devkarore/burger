@@ -4,7 +4,9 @@
       
       <div class="col-12 col-lg-5 order-2 order-lg-1 header-text">
         <h1> {{ article.titre }}</h1>
+        <div class="trait my-3"></div>
         <h2 [innerHTML]="article.sousTitre | hashtags"></h2>
+        <div class="trait my-3"></div>
         <p> {{ article.contenu }}</p>
       </div>
       

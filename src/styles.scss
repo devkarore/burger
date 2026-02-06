@@ -22,6 +22,11 @@ font-weight: $fontStyleRegular;
     font-weight: $fontStyleBold;
 }
 
+.trait
+        {
+        border:1px solid $yellowText;
+        }
+        
 h1 {
     color: $yellowText;
     font-size: $smallTitles;
@@ -39,6 +44,7 @@ H2 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 
 header{
